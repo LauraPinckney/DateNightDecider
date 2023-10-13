@@ -27,6 +27,10 @@ h2 {
   font-size: 1.5rem;
   line-height: 2rem;
   font-weight: 600;
+  font-style: italic;
+  justify-content: center;
+  display: flex;
+  padding: 0.5em;
   @include tablet {
     font-size: 2.25rem;
     line-height: 2.75rem;
@@ -36,6 +40,7 @@ h3 {
   font-size: 0.875rem;
   line-height: 1.375rem;
   font-weight: 600;
+  padding-top: 0.5em;
   @include tablet {
     font-size: 1.5rem;
     line-height: 2rem;
@@ -47,14 +52,18 @@ p {
   line-height: 1.125rem;
   font-weight: 400;
   color: lemonchiffon;
-  //   @include tablet {
-  //     font-size: 0.875rem;
-  //   }
 }
+
 button {
   background-color: lightcoral;
   border: 2px solid lightcoral;
   padding: 0.5em 0.5em;
   border-radius: 5px;
   color: $color2;
+  font-size: 1.5rem;
+}
+
+.button__container {
+  justify-content: center;
+  display: flex;
 }
