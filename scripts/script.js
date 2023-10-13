@@ -43,3 +43,35 @@ function createElements(cocktail) {
     main.appendChild(ingredient);
   }
 }
+
+const myApiURLTrivia = 'http://jservice.io/api/random';
+const getTrivia = async () => {
+  try {
+    const response = await axios.get(`${myApiURLTrivia}`);
+    const trivia = response.data;
+    console.log(trivia);
+    createTriviaQuestion(trivia);
+    createTriviaElement(trivia);
+    return response.data;
+  } catch (error) {
+    console.log('error');
+  }
+};
+getTrivia();
+
+const triviaSec = document.getElementById('trivia-section');
+function createTriviaElement(trivia) {
+  const answer = document.createElement('h3');
+  answer.textContent = trivia[0].answer;
+  question.appendChild(answer);
+}
+
+setTimeout((createTriviaElement) => {
+  return createTriviaElement;
+}, 3000);
+
+function createTriviaQuestion(trivia) {
+  const question = document.createElement('h2');
+  question.textContent = trivia[0].question;
+  triviaSec.appendChild(question);
+}

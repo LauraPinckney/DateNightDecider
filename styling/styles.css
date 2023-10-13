@@ -57,8 +57,7 @@ p {
 
 .main {
   background-color: #F2D4D6;
-  width: 100vw;
-  height: 100vw;
+  width: 100%;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -76,6 +75,11 @@ p {
 }
 
 #cocktail-section {
+  flex-direction: column;
+  display: flex;
+}
+
+#trivia-section {
   flex-direction: column;
   display: flex;
 }/*# sourceMappingURL=styles.css.map */

@@ -2,10 +2,16 @@
 @use 'global' as *;
 @use 'variables' as *;
 
+.navbar {
+}
+
+.header {
+}
+
 .main {
   background-color: $color2;
-  width: 100vw;
-  height: 100vw;
+  width: 100%;
+  //   height: 100vw;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -23,6 +29,11 @@
 }
 
 #cocktail-section {
+  flex-direction: column;
+  display: flex;
+}
+
+#trivia-section {
   flex-direction: column;
   display: flex;
 }
