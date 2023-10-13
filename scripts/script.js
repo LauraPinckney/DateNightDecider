@@ -55,6 +55,7 @@ const getTrivia = async () => {
     const response = await axios.get(`${myApiURLTrivia}`);
     const trivia = response.data;
     console.log(trivia);
+    triviaSec.innerText = '';
     createTriviaQuestion(trivia);
     createTriviaElement(trivia);
     return response.data;
@@ -65,9 +66,8 @@ const getTrivia = async () => {
 
 getTrivia();
 
-const triviaSec = document.getElementById('trivia-section');
+const triviaSec = document.querySelector('.trivia__button-select');
 function createTriviaElement(trivia) {
-  // document.querySelector('.trivia__button-select').innerText = '';
   const answer = document.createElement('h2');
   answer.textContent = trivia[0].answer;
   setTimeout(() => {
@@ -81,15 +81,15 @@ function createTriviaQuestion(trivia) {
   triviaSec.appendChild(question);
 }
 
-// const buttonTrivia = document.querySelector('.trivia__button-select');
-// buttonTrivia.addEventListener('click', (event) => {
-//   createTriviaQuestion();
-// });
+const buttonTrivia = document.querySelector('.button__trivia');
+buttonTrivia.addEventListener('click', (event) => {
+  getTrivia();
+});
 
 const movies = [
   {
     name: 'Moana',
-    imgSrc: './images/moana.jpg',
+    img: './images/moana.jpg',
   },
   {
     name: 'The Wolf of Wall Street',
@@ -148,8 +148,24 @@ const movies = [
     img: './images/shrek.jpg',
   },
   {
-    name: 'Blade Runner 2049',
-    img: './images/blade.jpg',
+    name: 'Southpaw',
+    img: './images/southpaw.jpg',
+  },
+  {
+    name: 'Creed',
+    img: './images/creed.jpg',
+  },
+  {
+    name: 'Project X',
+    img: './images/projectx.jpg',
+  },
+  {
+    name: 'Avatar',
+    img: './images/avatar.jpg',
+  },
+  {
+    name: 'The Shining',
+    img: './images/shining.jpg',
   },
 ];
 
@@ -173,7 +189,7 @@ function addMovies() {
 }
 
 function getRandomNumber() {
-  return Math.floor(Math.random() * 15);
+  return Math.floor(Math.random() * 20);
 }
 
 getRandomNumber();

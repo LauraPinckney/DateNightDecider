@@ -48,6 +48,10 @@ li {
   display: flex;
   justify-content: space-evenly;
   flex-direction: row;
+  @include extra {
+    padding-left: 7em;
+    padding-right: 7em;
+  }
 }
 
 #cocktail-section {
@@ -128,4 +132,8 @@ li {
   display: flex;
   padding-bottom: 0.75em;
   padding-top: 0.75em;
+}
+
+.button__trivia {
+  flex-direction: column;
 }

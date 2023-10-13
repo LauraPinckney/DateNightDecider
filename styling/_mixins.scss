@@ -11,3 +11,9 @@
     @content;
   }
 }
+
+@mixin extra {
+  @media screen and (min-width: $extra-breakpoint) {
+    @content;
+  }
+}
