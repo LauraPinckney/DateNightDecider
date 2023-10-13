@@ -1,0 +1,17 @@
+@use 'mixins' as *;
+@use 'global' as *;
+@use 'variables' as *;
+
+.main {
+    background-color: cadetblue;
+    width: 100vw;
+    height: 100vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.header {
+background-color: aqua;
+margin: 1 auto;
+}
