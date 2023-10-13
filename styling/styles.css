@@ -149,12 +149,31 @@ li {
   justify-content: center;
 }
 
+#movies__section {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 2em;
+  padding-right: 2em;
+  padding-left: 2em;
+}
+
+.movies__container--header {
+  padding-bottom: 0.75em;
+  justify-content: center;
+  display: flex;
+}
+
+.movie__image {
+  height: 25em;
+}
+
 #trivia-section {
   flex-direction: column;
   display: flex;
   padding-bottom: 5em;
   width: 100%;
   padding-right: 2em;
+  padding-left: 2em;
 }
 
 .trivia__container--header {

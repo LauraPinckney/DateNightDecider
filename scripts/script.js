@@ -16,6 +16,7 @@ const getCocktail = async () => {
 getCocktail();
 
 function createElements(cocktail) {
+  document.querySelector('.cocktail__container').innerText = '';
   const title = document.createElement('h2');
   title.textContent = cocktail.drinks[0].strDrink;
 
@@ -24,7 +25,7 @@ function createElements(cocktail) {
   image.alt = 'Random Cocktail';
   image.classList.add('img');
 
-  const main = document.getElementById('cocktail-section');
+  const main = document.querySelector('.cocktail__container');
   main.appendChild(title);
   main.appendChild(image);
 
@@ -43,6 +44,10 @@ function createElements(cocktail) {
     main.appendChild(ingredient);
   }
 }
+const buttonCocktail = document.querySelector('.button__cocktail');
+buttonCocktail.addEventListener('click', (event) => {
+  getCocktail();
+});
 
 const myApiURLTrivia = 'http://jservice.io/api/random';
 const getTrivia = async () => {
@@ -62,9 +67,12 @@ getTrivia();
 
 const triviaSec = document.getElementById('trivia-section');
 function createTriviaElement(trivia) {
+  // document.querySelector('.trivia__button-select').innerText = '';
   const answer = document.createElement('h2');
   answer.textContent = trivia[0].answer;
-  triviaSec.appendChild(answer);
+  setTimeout(() => {
+    triviaSec.appendChild(answer);
+  }, 5000);
 }
 
 function createTriviaQuestion(trivia) {
@@ -73,99 +81,105 @@ function createTriviaQuestion(trivia) {
   triviaSec.appendChild(question);
 }
 
-
+// const buttonTrivia = document.querySelector('.trivia__button-select');
+// buttonTrivia.addEventListener('click', (event) => {
+//   createTriviaQuestion();
+// });
 
 const movies = [
   {
-    name: "Moana",
-    imgSrc: "./images/moana.jpg"
+    name: 'Moana',
+    imgSrc: './images/moana.jpg',
   },
   {
-    name: "The wolf of wall street",
-    img: "./images/wall-street.jpg"
+    name: 'The Wolf of Wall Street',
+    img: './images/wall-street.jpg',
   },
   {
-    name: "The commitments",
-    img: "./images/commitments.jpg"
+    name: 'The Commitments',
+    img: './images/commitments.jpg',
   },
   {
-    name: "Top Gun",
-    img: "../images/top-gun.jpg"
+    name: 'Top Gun',
+    img: '../images/top-gun.jpg',
   },
   {
-    name: "Spider-man",
-    img: "./images/spider.jpg"
+    name: 'Spider-man',
+    img: './images/spider.jpg',
   },
   {
-    name: "Guardians of the galaxy",
-    img: "./images/gotg.jpg"
+    name: 'Guardians of the Galaxy',
+    img: './images/gotg.jpg',
   },
   {
-    name: "Shutter Island",
-    img: "./images/shutter-island.jpg"
+    name: 'Shutter Island',
+    img: './images/shutter-island.jpg',
   },
   {
-    name: "Paddington",
-    img: "./images/paddington.jpg"
+    name: 'Paddington',
+    img: './images/paddington.jpg',
   },
   {
-    name: "Titanic",
-    img: "./images/titanic.jpg"
+    name: 'Titanic',
+    img: './images/titanic.jpg',
   },
   {
-    name: "The Terminator",
-    img: "./images/terminator.jpg"
+    name: 'The Terminator',
+    img: './images/terminator.jpg',
   },
   {
-    name: "Fast and Furous: Tokyo Drift",
-    img: "./images/faf.jpg"
+    name: 'Fast and Furous: Tokyo Drift',
+    img: './images/faf.jpg',
   },
   {
-    name: "My Big Fat Greek Wedding",
-    img: "./images/greek-wedding.jpg"
+    name: 'My Big Fat Greek Wedding',
+    img: './images/greek-wedding.jpg',
   },
   {
-    name: "The Blindside",
-    img: "./images/blindside.jpg"
+    name: 'The Blindside',
+    img: './images/blindside.jpg',
   },
   {
-    name: "Shaun Of The Dead",
-    img: "./images/shaun.jpg"
+    name: 'Shaun Of The Dead',
+    img: './images/shaun.jpg',
   },
   {
-    name: "Shrek",
-    img: "./images/shrek.jpg"
+    name: 'Shrek',
+    img: './images/shrek.jpg',
   },
   {
-    name: "Blade Runner 2049",
-    img: "./images/blade.jpg"
-  }
-]
+    name: 'Blade Runner 2049',
+    img: './images/blade.jpg',
+  },
+];
 
 function addMovies() {
-  document.querySelector(".display__movie").innerText = "";
-      const movieCard = document.createElement("div");
-      const movieTitle = document.createElement("h2");
-      const movieImg = document.createElement("img");
+  document.querySelector('.display__movie').innerText = '';
+  const movieCard = document.createElement('div');
+  const movieTitle = document.createElement('h2');
+  const movieImg = document.createElement('img');
 
-      movieTitle.classList.add("movie__title")
-      movieImg.classList.add("movie__image");
+  movieTitle.classList.add('movie__title');
+  movieImg.classList.add('movie__image');
 
-       const randomMovie = getRandomNumber()
-      movieTitle.innerText = movies[randomMovie].name;
-      movieImg.setAttribute("src", movies[randomMovie].img)
+  const randomMovie = getRandomNumber();
+  movieTitle.innerText = movies[randomMovie].name;
+  movieImg.setAttribute('src', movies[randomMovie].img);
 
-      movieCard.appendChild(movieTitle);
-      movieCard.appendChild(movieImg);
+  movieCard.appendChild(movieTitle);
+  movieCard.appendChild(movieImg);
 
+  document.querySelector('.display__movie').appendChild(movieCard);
+}
 
-      document.querySelector(".display__movie").appendChild(movieCard);
-    }
+function getRandomNumber() {
+  return Math.floor(Math.random() * 15);
+}
 
+getRandomNumber();
+addMovies();
 
-  function getRandomNumber(){
-   return Math.floor(Math.random() * 15) 
-  }
-
-  getRandomNumber()
-  addMovies()
+const buttonMovies = document.querySelector('.button__movie');
+buttonMovies.addEventListener('click', (event) => {
+  addMovies();
+});
