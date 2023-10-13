@@ -4,6 +4,7 @@
   padding: 0;
   text-decoration: none;
   list-style: none;
+  color: #213F99;
 }
 
 h1 {
@@ -55,7 +56,7 @@ p {
 }
 
 .main {
-  background-color: cadetblue;
+  background-color: #F2D4D6;
   width: 100vw;
   height: 100vw;
   display: flex;
@@ -64,6 +65,12 @@ p {
 }
 
 .header {
-  background-color: aqua;
+  background-color: #E1B0AC;
   margin: 1 auto;
+}
+
+.ingredients {
+  background-color: #E1B0AC;
+  font-size: 1.5rem;
+  margin-top: 1rem;
 }/*# sourceMappingURL=styles.css.map */

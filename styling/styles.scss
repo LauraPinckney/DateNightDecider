@@ -3,7 +3,7 @@
 @use 'variables' as *;
 
 .main {
-    background-color: cadetblue;
+    background-color: $color2;
     width: 100vw;
     height: 100vw;
     display: flex;
@@ -12,6 +12,12 @@
 }
 
 .header {
-background-color: aqua;
+background-color: $color1;
 margin: 1 auto;
+}
+
+.ingredients {
+    background-color: $color1;
+    font-size: 1.5rem;
+    margin-top: 1rem;
 }

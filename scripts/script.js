@@ -19,17 +19,25 @@ function createElements(cocktail) {
     const title = document.createElement("h2");
     title.textContent = cocktail.drinks[0].strDrink;
   
-    const explanation = document.createElement("p");
-    explanation.textContent = cocktail.drinks[0].explanation;
-  
     const image = document.createElement("img");
-    image.src = cocktail.hdurl;
+    image.src = cocktail.drinks[0].strDrinkThumb;
     image.alt = "Random Cocktail";
     image.classList.add("img");
   
     const main = document.querySelector(".main");
     main.appendChild(title);
-    main.appendChild(explanation);
     main.appendChild(image);
+    
+    for (let i = 1; i < 16; i++){
+    console.log(i);
+    if(cocktail.drinks[0][`strIngredient${i}`] == null){
+        break;
+    }
+    
+    let ingredient = document.createElement('ons-list-item');
+    ingredient.classList.add("ingredients")
+    ingredient.innerText = cocktail.drinks[0][`strMeasure${i}`] + ':' + cocktail.drinks[0][`strIngredient${i}`]
+    main.appendChild(ingredient)
+    }
   }
   
