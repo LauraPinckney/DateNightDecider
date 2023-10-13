@@ -7,10 +7,32 @@
     <title>Cocktail</title>
   </head>
   <body>
-    <header class="header">
-      <h1>Cocktails</h1>
+    <header class="header-container">
+      <h1>Date Night Decider</h1>
+      <ul class="navbar">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Cocktail Types </a></li>
+        <li><a href="#">Trivia Genres</a></li>
+      </ul>
     </header>
-    <main class="main"></main>
+    <main class="main">
+      <section id="cocktail-section">
+        <div class="cocktail__container">
+          <h2 class="">Cocktail</h2>
+          <div class="button__container">
+            <button class="button__container--random">Random</button>
+          </div>
+        </div>
+      </section>
+      <section id="trivia-section">
+        <div class="trivia__container">
+          <h2 class="trivia__container--header">Trivia</h2>
+          <div class="button__container">
+            <button class="button__container--random">Random</button>
+          </div>
+        </div>
+      </section>
+    </main>
 
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="./scripts/script.js"></script>

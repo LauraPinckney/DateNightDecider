@@ -3,21 +3,26 @@
 @use 'variables' as *;
 
 .main {
-    background-color: $color2;
-    width: 100vw;
-    height: 100vw;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+  background-color: $color2;
+  width: 100vw;
+  height: 100vw;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 .header {
-background-color: $color1;
-margin: 1 auto;
+  background-color: $color1;
+  margin: 1 auto;
 }
 
 .ingredients {
-    background-color: $color1;
-    font-size: 1.5rem;
-    margin-top: 1rem;
+  background-color: $color1;
+  font-size: 1.5rem;
+  margin-top: 1rem;
+}
+
+#cocktail-section {
+  flex-direction: column;
+  display: flex;
 }

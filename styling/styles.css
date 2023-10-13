@@ -73,4 +73,9 @@ p {
   background-color: #E1B0AC;
   font-size: 1.5rem;
   margin-top: 1rem;
+}
+
+#cocktail-section {
+  flex-direction: column;
+  display: flex;
 }/*# sourceMappingURL=styles.css.map */
