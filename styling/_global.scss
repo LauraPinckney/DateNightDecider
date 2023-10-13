@@ -2,51 +2,59 @@
 @use 'mixins' as *;
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    text-decoration: none;
-    list-style: none;
-    color: $color3;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  color: $color1;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-
 
 h1 {
-    font-size: 1.5rem;
-    line-height: 2rem;
-    font-weight: 600;
-    font-style: normal;
-    @include tablet {
-        font-size: 3.75rem;
-        line-height: 4.25rem;
-    }
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 600;
+  font-style: normal;
+  color: $color4;
+  @include tablet {
+    font-size: 3.75rem;
+    line-height: 4.25rem;
+  }
 }
-
 
 h2 {
-    font-size: 1.5rem;
-    line-height: 2rem;
-    font-weight: 600;
-    @include tablet {
-        font-size: 2.25rem;
-        line-height: 2.75rem;
-    }
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 600;
+  @include tablet {
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+  }
 }
 h3 {
-    font-size: .875rem;
-    line-height: 1.375rem;
-    font-weight: 600;
-    @include tablet {
-     font-size: 1.5rem;
-     line-height: 2rem;   
-    }
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  font-weight: 600;
+  @include tablet {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
 }
 
 p {
-    font-size: .875rem;
-    line-height: 1.125rem;
-    font-weight: 400;
-    @include tablet {
-        font-size: .875rem;
-    }
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  font-weight: 400;
+  color: lemonchiffon;
+  //   @include tablet {
+  //     font-size: 0.875rem;
+  //   }
+}
+button {
+  background-color: lightcoral;
+  border: 2px solid lightcoral;
+  padding: 0.5em 0.5em;
+  border-radius: 5px;
+  color: $color2;
 }

@@ -58,20 +58,14 @@ const getTrivia = async () => {
   }
 };
 getTrivia();
-
 const triviaSec = document.getElementById('trivia-section');
 function createTriviaElement(trivia) {
-  const answer = document.createElement('h3');
+  const answer = document.createElement('h2');
   answer.textContent = trivia[0].answer;
-  question.appendChild(answer);
+  triviaSec.appendChild(answer);
 }
-
-setTimeout((createTriviaElement) => {
-  return createTriviaElement;
-}, 3000);
-
 function createTriviaQuestion(trivia) {
-  const question = document.createElement('h2');
+  const question = document.createElement('h3');
   question.textContent = trivia[0].question;
   triviaSec.appendChild(question);
 }

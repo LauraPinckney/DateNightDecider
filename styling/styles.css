@@ -4,7 +4,8 @@
   padding: 0;
   text-decoration: none;
   list-style: none;
-  color: #213F99;
+  color: rgb(106, 106, 106);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 h1 {
@@ -12,6 +13,7 @@ h1 {
   line-height: 2rem;
   font-weight: 600;
   font-style: normal;
+  color: rgb(126, 126, 126);
 }
 @media screen and (min-width: 768px) {
   h1 {
@@ -48,38 +50,98 @@ p {
   font-size: 0.875rem;
   line-height: 1.125rem;
   font-weight: 400;
+  color: lemonchiffon;
 }
-@media screen and (min-width: 768px) {
-  p {
-    font-size: 0.875rem;
-  }
+
+button {
+  background-color: lightcoral;
+  border: 2px solid lightcoral;
+  padding: 0.5em 0.5em;
+  border-radius: 5px;
+  color: rgb(253, 245, 245);
+}
+
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 1.5rem;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  padding-left: 2em;
+  position: fixed;
+  background-color: white;
+  width: 100%;
+}
+
+li {
+  padding-left: 1.5em;
+  color: rgb(106, 106, 106);
+}
+
+#hero-container {
+  padding-top: 7em;
+  padding-bottom: 3em;
+  background-color: rgb(224, 224, 224);
+  display: flex;
+  justify-content: center;
+}
+
+.logo {
+  background-color: lightcoral;
+  width: 8.55rem;
+  height: 4rem;
+  text-align: center;
+  color: rgb(253, 245, 245);
+  font-weight: 700;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  border: 2px solid rgb(106, 106, 106);
 }
 
 .main {
-  background-color: #F2D4D6;
+  background-color: rgb(253, 245, 245);
   width: 100%;
   display: flex;
-  align-items: center;
-  flex-direction: column;
-}
-
-.header {
-  background-color: #E1B0AC;
-  margin: 1 auto;
-}
-
-.ingredients {
-  background-color: #E1B0AC;
-  font-size: 1.5rem;
-  margin-top: 1rem;
+  justify-content: space-between;
+  flex-direction: row;
 }
 
 #cocktail-section {
   flex-direction: column;
   display: flex;
+  padding-bottom: 2em;
+  width: 45%;
+  padding-right: 2em;
+  padding-left: 2em;
+}
+
+.cocktail__header {
+  padding-bottom: 0.75em;
+  justify-content: center;
+  display: flex;
+}
+
+.img {
+  width: 50%;
+  display: flex;
+}
+
+.ingredients {
+  font-size: 1.5rem;
+  margin-top: 1rem;
 }
 
 #trivia-section {
   flex-direction: column;
   display: flex;
+  padding-bottom: 5em;
+  width: 45%;
+  padding-right: 2em;
+}
+
+.trivia__container--header {
+  justify-content: center;
+  display: flex;
+  padding-bottom: 0.75em;
 }/*# sourceMappingURL=styles.css.map */
