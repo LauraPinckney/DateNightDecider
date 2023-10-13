@@ -44,7 +44,7 @@ li {
   background-color: $color2;
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   flex-direction: row;
 }
 
@@ -83,7 +83,7 @@ li {
   flex-direction: column;
   display: flex;
   padding-bottom: 5em;
-  width: 45%;
+  width: 100%;
   padding-right: 2em;
 }
 
