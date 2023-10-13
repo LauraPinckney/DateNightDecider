@@ -29,8 +29,8 @@ li {
 
 .logo {
   background-color: $color3;
-  width: 8.55rem;
-  height: 4rem;
+  width: 15rem;
+  height: 9rem;
   text-align: center;
   color: $color2;
   font-weight: 700;
@@ -38,13 +38,15 @@ li {
   display: flex;
   align-items: center;
   border: 2px solid $color1;
+  font-size: 2rem;
+  line-height: 3rem;
 }
 
 .main {
   background-color: $color2;
   width: 100%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   flex-direction: row;
 }
 
@@ -60,13 +62,15 @@ li {
 .cocktail {
   &__header {
     padding-bottom: 0.75em;
+    padding-top: 0.75em;
     justify-content: center;
     display: flex;
   }
 }
 
 .img {
-  width: 50%;
+  width: auto;
+  height: 20em;
   margin: 0 auto;
   padding-top: 0.5em;
   padding-bottom: 0.5em;
@@ -79,19 +83,19 @@ li {
   justify-content: center;
 }
 
-#movies__section {
-  // flex-direction: column;
+.movies__section {
+  flex-direction: column;
   display: flex;
-  justify-content: center;
   padding-bottom: 2em;
-
-  padding-right: 2em;
+  width: 45%;
+  padding-right: 2em em;
   padding-left: 2em;
 }
 
 .movies__container {
   &--header {
     padding-bottom: 0.75em;
+    padding-top: 0.75em;
     justify-content: center;
     display: flex;
   }
@@ -99,6 +103,15 @@ li {
 
 .movie__image {
   height: 25em;
+  margin: 0 auto;
+  justify-content: center;
+  display: flex;
+}
+
+.button__movie {
+  margin: 0 auto;
+  justify-content: center;
+  display: flex;
 }
 
 #trivia-section {
@@ -114,4 +127,5 @@ li {
   justify-content: center;
   display: flex;
   padding-bottom: 0.75em;
+  padding-top: 0.75em;
 }
